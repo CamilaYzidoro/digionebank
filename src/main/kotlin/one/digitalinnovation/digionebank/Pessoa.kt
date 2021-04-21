@@ -2,7 +2,9 @@ package one.digitalinnovation.digionebank
 
 class Pessoa {
     var nome: String = "Camila"
-    var cpf: String = "418.532.818-40"
+
+    var cpf: String = "123.456.789-00"
+    private set
 }
 
 fun main() {
