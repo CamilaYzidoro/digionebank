@@ -1,17 +1,31 @@
 package one.digitalinnovation.digionebank
 
-import java.math.BigDecimal
+import kotlin.IllegalArgumentException
+import kotlin.contracts.contract
 
-class Conta {
-    val agencia:String,
-    val numero:Int,
-    val saldo:BigDecimal
-} {
-    fun deposito(valor: BigDecimal){
+class Conta (
+        val agencia: String,
+        val numero: String,
+    ) : Depositavel, Sacavel {
+    var saldo: Double = 0.0; private set
+
+    override fun deposito (valor: Double){
+        this.saldo += valor
     }
 
-   }
-   fun saque(valor: BigDecimal){
-
-   }
+    override fun saque(valor: Double) {
+        if (this.saldo < valor) {
+            throw IllegalArgumentException("Saldo Insuficiente.")
+        } else {
+            this.saldo -= valor
+        }
+    }
+    override fun toString(): String {
+        return """
+        Ag.:   $agencia
+        Conta: $numero
+        Saldo: $saldo
+    """.trimIndent()
+    }
 }
+
