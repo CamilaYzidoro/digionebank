@@ -3,7 +3,7 @@ package one.digitalinnovation.digionebank.testes
 import one.digitalinnovation.digionebank.Cliente
 import one.digitalinnovation.digionebank.ClienteTipo
 
-fun main{
+fun main(){
     val gabriela = Cliente(
         nome = "Gabriela Oliveira",
         cpf="987.321.600-54",
