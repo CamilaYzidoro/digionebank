@@ -10,7 +10,11 @@ class Conta (
     var saldo: Double = 0.0; private set
 
     override fun deposito (valor: Double){
-        this.saldo += valor
+        if (this.saldo > valor) {
+            throw IllegalArgumentException("Não é possivel depositar valores negativos.")
+        } else {
+            this.saldo += valor
+        }
     }
 
     override fun saque(valor: Double) {

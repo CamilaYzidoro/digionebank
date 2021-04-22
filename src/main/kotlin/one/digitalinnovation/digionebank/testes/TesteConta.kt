@@ -7,11 +7,11 @@ fun main (){
     println(cc)
 
     cc.deposito(250.25)
-    println("Deposito realizado!")
+    println("Deposito realizado! R$"+cc.saldo)
 
-    cc.saque(30.0)
-    println("Saque realizado!")
+    cc.saque(30.2)
+    println("Saque realizado!    R$"+cc.saldo)
 
-    cc.saque(300.0)
-    println(cc)
+    cc.saque(300.5)
+    println("Saque realizado!    R$"+cc.saldo)
 }
