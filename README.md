@@ -2,4 +2,4 @@
 
 ## Trilha Kotlin
 
-### Aprendo classes Kotlin com @digitalinnovationone e @Everis. Professor @jether2011
+### Aprendendo classes Kotlin com @digitalinnovationone e @Everis. Professor @jether2011
